@@ -6,16 +6,14 @@ import reportWebVitals from './reportWebVitals';
 
 const client = new QueryClient();
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
-  <QueryClientProvider client={client}>
-    <React.StrictMode>
+  <React.StrictMode>
+    <QueryClientProvider client={client}>
       <App />
-    </React.StrictMode>
-  </QueryClientProvider>
+    </QueryClientProvider>
+  </React.StrictMode>,
 );
 
 reportWebVitals();
