@@ -1,4 +1,4 @@
-## 🛒 eact, Typescript를 사용한 Shopping cart 만들기
+## 🛒 React, Typescript를 사용한 Shopping cart 만들기
 
 타입스크립트를 사용하여 쇼핑 카트를 만들어 보기
 
