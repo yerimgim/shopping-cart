@@ -9,6 +9,7 @@
 - 타입스크립트 경험이 최우선 목표
 - MUI를 사용하여 간편하게 컴포넌트 만들기
 - Mock api로 받아 온 값을 React query 사용해 보기
+- Mock api 받을 때 axios를 사용하기
 
 ## 기술 스택
 

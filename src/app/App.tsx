@@ -34,7 +34,6 @@ const App = () => {
   const { data, isLoading, error } = useQuery<CartItemType[]>('products', getProducts);
 
   const getTotalItems = (items: CartItemType[]) => items.reduce((acc: number, item) => acc + item.amount, 0);
-
   const handleAddToCart = (clieckedItem: CartItemType) => {
     setCartItems(prev => {
       const isItemInCart = prev.find(item => item.id === clieckedItem.id);
@@ -46,7 +45,6 @@ const App = () => {
       return [...prev, { ...clieckedItem, amount: 1 }];
     });
   };
-
   const handleRemoveFromCart = (id: number) => {
     setCartItems(prev =>
       prev.reduce((acc, item) => {
@@ -74,7 +72,7 @@ const App = () => {
         </Badge>
       </StyledButton>
 
-      <Grid container spacing={3}>
+      <Grid container spacing={4}>
         {data?.map(item => (
           <Grid item key={item.id} xs={12} sm={4}>
             <Item item={item} handleAddToCart={handleAddToCart} />
