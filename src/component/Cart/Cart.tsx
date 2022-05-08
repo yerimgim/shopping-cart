@@ -20,6 +20,9 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
   );
 };
 
-const Entry = styled.aside``;
+const Entry = styled.aside`
+  width: 100%;
+  padding: 20px;
+`;
 
 export default Cart;

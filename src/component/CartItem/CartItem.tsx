@@ -1,6 +1,5 @@
 import Button from '@material-ui/core/Button';
 import styled from 'styled-components';
-import { isTemplateSpan } from 'typescript';
 
 import { CartItemType } from '../../app/App';
 
@@ -29,6 +28,27 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
   </Entry>
 );
 
-const Entry = styled.main``;
+const Entry = styled.main`
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid lightgray;
+
+  div {
+    flex: 1;
+  }
+
+  .item-information,
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  img {
+    max-width: 80px;
+    margin-left: 40px;
+    object-fit: cover;
+  }
+`;
 
 export default CartItem;
