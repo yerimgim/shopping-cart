@@ -4,6 +4,10 @@
 
 [해당 내용 정리 Notion](https://www.notion.so/yerimgim/React-Typescript-Shopping-Cart-cac6fe10b9f04be9894e246c84a36e1d)
 
+##### 해당 notion 정리 중..
+
+<br/>
+
 ## 목표
 
 - 타입스크립트 경험이 최우선 목표
