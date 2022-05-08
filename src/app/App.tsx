@@ -21,8 +21,15 @@ const getProducts = async (): Promise<CartItemType[]> => await (await fetch('htt
 
 const App = () => {
   const { data, isLoading, error } = useQuery<CartItemType[]>('products', getProducts);
-  console.log(data);
-  return <Entry></Entry>;
+
+  const getTotalItems = () => null;
+  const handleAddToCart = (clieckedItem: CartItemType) => null;
+  const handleRemoveFromCart = () => null;
+
+  if (isLoading) return <LinearProgress />;
+  if (error) return <div>error..</div>;
+
+  return <Entry>hi</Entry>;
 };
 
 const Entry = styled.main``;
