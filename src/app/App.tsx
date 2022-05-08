@@ -30,6 +30,7 @@ const App = () => {
   const { data, isLoading, error } = useQuery<CartItemType[]>('products', getProducts);
 
   const getTotalItems = (items: CartItemType[]) => items.reduce((acc: number, item) => acc + item.amount, 0);
+
   const handleAddToCart = (clieckedItem: CartItemType) => {
     setCartItems(prev => {
       const isItemInCart = prev.find(item => item.id === clieckedItem.id);
@@ -41,7 +42,19 @@ const App = () => {
       return [...prev, { ...clieckedItem, amount: 1 }];
     });
   };
-  const handleRemoveFromCart = () => null;
+
+  const handleRemoveFromCart = (id: number) => {
+    setCartItems(prev =>
+      prev.reduce((acc, item) => {
+        if (item.id === id) {
+          if (item.amount === 1) return acc;
+          return [...acc, { ...item, amount: item.amount - 1 }];
+        } else {
+          return [...acc, item];
+        }
+      }, [] as CartItemType[]),
+    );
+  };
 
   if (isLoading) return <LinearProgress />;
   if (error) return <div>error..</div>;
