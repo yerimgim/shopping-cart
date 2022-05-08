@@ -2,9 +2,7 @@
 
 타입스크립트를 사용하여 쇼핑 카트를 만들어 보기
 
-[해당 내용 정리 Notion](https://www.notion.so/yerimgim/React-Typescript-Shopping-Cart-cac6fe10b9f04be9894e246c84a36e1d)
-
-##### 해당 notion 정리 중..
+[🧐 해당 내용 정리 Notion (정리 중...) ](https://www.notion.so/yerimgim/React-Typescript-Shopping-Cart-cac6fe10b9f04be9894e246c84a36e1d)
 
 <br/>
 
