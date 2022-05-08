@@ -13,8 +13,8 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 
   return (
     <Entry>
-      <h2>User shopping Cart</h2>
-      {cartItems.length === 0 ? <p>No items</p> : null}
+      <h2>🛒 Shopping Cart </h2>
+      {cartItems.length === 0 ? <p>No items 😂</p> : null}
       {cartItems.map(item => (
         <CartItem key={item.id} item={item} addToCart={addToCart} removeFromCart={removeFromCart} />
       ))}
@@ -24,7 +24,7 @@ const Cart: React.FC<Props> = ({ cartItems, addToCart, removeFromCart }) => {
 };
 
 const Entry = styled.aside`
-  width: 500px;
+  width: 400px;
   padding: 20px;
 `;
 

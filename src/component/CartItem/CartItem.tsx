@@ -18,9 +18,11 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
       <p>Price: ${item.price}</p>
       <p>Total: ${(item.amount * item.price).toFixed(2)}</p>
     </div>
-
+    <div className="img-box">
+      <img src={item.image} alt={item.title} />
+    </div>
     <div className="buttons">
-      <Button size="small" disableElevation variant="contained" onClick={() => removeFromCart(item.id)}>
+      <Button size="small" disableElevation variant="outlined" onClick={() => removeFromCart(item.id)}>
         -
       </Button>
       <p>{item.amount}</p>
@@ -28,13 +30,13 @@ const CartItem: React.FC<Props> = ({ item, addToCart, removeFromCart }) => (
         +
       </Button>
     </div>
-    <img src={item.image} alt={item.title} />
   </Entry>
 );
 
 const Entry = styled.main`
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding-bottom: 20px;
   border-bottom: 1px solid lightgray;
 
@@ -48,10 +50,13 @@ const Entry = styled.main`
     justify-content: space-between;
   }
 
-  img {
-    max-width: 80px;
-    margin-left: 40px;
-    object-fit: cover;
+  .img-box {
+    text-align: center;
+
+    img {
+      max-width: 80px;
+      object-fit: cover;
+    }
   }
 `;
 

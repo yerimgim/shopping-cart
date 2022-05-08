@@ -82,14 +82,14 @@ const App = () => {
 };
 
 const Entry = styled.main`
-  margin: 40px;
+  margin: 80px;
 `;
 
 const StyledButton = styled(IconButton)`
   position: fixed;
-  z-index: 10;
   top: 20px;
   right: 20px;
+  z-index: 10;
 `;
 
 export default App;
