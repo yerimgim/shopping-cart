@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useQuery } from 'react-query';
 import Drawer from '@material-ui/core/Drawer';
 import LinearProgress from '@material-ui/core/LinearProgress';
@@ -7,6 +7,7 @@ import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 import IconButton from '@material-ui/core/IconButton';
 import { Badge } from '@material-ui/core';
 import styled from 'styled-components';
+import axios from 'axios';
 
 import Item from '../component/Item/Item';
 import Cart from '../component/Cart/Cart';
@@ -21,7 +22,10 @@ export type CartItemType = {
   amount: number;
 };
 
-const getProducts = async (): Promise<CartItemType[]> => await (await fetch('https://fakestoreapi.com/products')).json();
+const getProducts = async () => {
+  const response = await axios.get<CartItemType[]>('https://fakestoreapi.com/products');
+  return response.data;
+};
 
 const App = () => {
   const [cartOpen, setCartOpen] = useState(false);
